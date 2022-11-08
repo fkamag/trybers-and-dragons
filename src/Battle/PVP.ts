@@ -11,7 +11,13 @@ class PVP extends Battle {
       this._player1.attack(this._player2);
       this._player2.attack(this._player1);
     }
-    return super.fight();
+    const result = super.fight();
+    if (result === 1) {
+      console.log('O primeiro player venceu a batalha');
+    } else {
+      console.log('O segundo player venceu a batalha');
+    }
+    return result;
   }
 }
 

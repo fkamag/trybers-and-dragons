@@ -16,7 +16,13 @@ class PVE extends Battle {
         enemy.attack(this._player1);
       }
     });
-    return super.fight();
+    const result = super.fight();
+    if (result === -1) {
+      console.log('Player1 perdeu a batalha');
+    } else {
+      console.log('Player1 venceu a batalha');
+    }
+    return result;
   }
 }
 

@@ -50,7 +50,7 @@ class Character implements Fighter {
   }
 
   attack(enemy: Fighter | SimpleFighter): void {
-    enemy.receiveDamage(this._strength);
+    enemy.receiveDamage(this.strength);
   }
 
   levelUp(): void {
